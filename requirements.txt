@@ -1,0 +1,14 @@
+# Puzzle Piece Finder — Python dependencies
+#
+# Everything else it uses (os, sys, time, glob, re, argparse, threading,
+# subprocess, shutil, wave, tempfile) ships with the Python standard library.
+
+numpy>=1.21
+opencv-python>=4.5        # provides cv2, including SIFT (patent expired in 4.4+,
+                          # so the plain package is enough — no -contrib needed).
+                          # opencv-contrib-python also works if you prefer it.
+
+# Optional, for the "match finished" chime on Linux you need ONE audio player on
+# your PATH (not a pip package): pipewire (pw-play), pulseaudio (paplay),
+# alsa-utils (aplay), sox (play), or ffmpeg (ffplay). On macOS/Windows the app
+# runs fine without one; set BEEP = False in the script to silence the warning.
